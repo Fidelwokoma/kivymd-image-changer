@@ -1,0 +1,46 @@
+<Mgrap@ButtonBehavior+MDFloatLayout>
+MDScreen:
+    MDFloatLayout:
+        Image:
+            id: fidel
+            source: "fse.jpg"
+            allow_stretch:False
+            pos_hint: {'center_x': 0.5,'center_y': .56}
+            size_hint: 1, 1.
+
+        Mgrap:
+            Mgrap:
+                md_bg_color: '#e4e5f4'
+                size_hint: None, None
+                width: 50
+                height: 50
+                pos_hint: {'center_x': 0.1,'center_y': 0.5}
+                on_press: app.change_img(fidel, 'backward')
+                MDIcon:
+                    icon: 'skip-backward'            
+                    color: 'black'
+                    pos_hint: {'center_x': 0.5,'center_y': 0.5}
+            
+            Mgrap:
+                md_bg_color: '#e4e5f4'
+                size_hint: None, None
+                width: 50
+                height: 50
+                pos_hint: {'center_x': 0.9,'center_y': 0.5}
+                on_press: app.change_img(fidel, 'forward')
+            
+                MDIcon:
+                    icon: 'skip-forward'            
+                    color: 'black'
+                    pos_hint: {'center_x': 0.5,'center_y': 0.5}
+    Mgrap:
+        md_bg_color: 'red'
+        size_hint: 1, .1
+        pos_hint: {'center_x': 0.5,'center_y': 0.05}
+        on_press: print('fidel')
+        MDIcon:
+            icon: 'download-outline'
+            pos_hint: {'center_x': 0.5,'center_y': .5}               
+            font_size: 50
+            color: 'white'
+
